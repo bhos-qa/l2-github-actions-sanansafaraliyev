@@ -32,6 +32,10 @@ jobs:
           distribution: 'corretto'
           java-version: '17'
 
+      - name: Make executable
+        run: |
+          chmod +x gradlew
+
       - name: Sum application
         run: |
           ./gradlew build
@@ -46,6 +50,10 @@ jobs:
       with:
         distribution: 'corretto'
         java-version: '17'
+
+    - name: Make executable
+      run: |
+        chmod +x gradlew
 
     - name: Test Sum application
       run: |
